@@ -29,7 +29,7 @@ class BLE_GLASSES:
         self.client = bleak.BleakClient(self.device)
 
     async def connect_by_uuid(self):
-        devices = bleak.BleakScanner.discover()
+        devices = await bleak.BleakScanner.discover()
         for device in devices:
             if self.service_uuid in device.details['props']['UUIDs']:
                 print(f"Connecting to {device.address} - {device.name}")
@@ -65,7 +65,8 @@ class BLE_GLASSES:
 if __name__ == "__main__":
     # Example usage:
     # Create an instance with a MAC address
-    my_glasses = BLE_GLASSES(mac_address="00:3A:FE:00:CA:87")
+    #my_glasses = BLE_GLASSES(mac_address="00:3A:FE:00:CA:87")
+    my_glasses = BLE_GLASSES()
 
     my_glasses.clear_screen()
 
