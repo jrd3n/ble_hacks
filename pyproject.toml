@@ -1,0 +1,18 @@
+[project]
+name = "ble_hacks"
+version = "0.0.1"
+authors = [
+  { name="Jordon Archer", email="jrd3n@live.co.uk" },
+]
+description = "A Python library to interact with BLE toys that have been reverse-engineered."
+readme = "README.md"
+requires-python = ">=3.11.2"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/jrd3n/ble_hacks"
+"Bug Tracker" = "https://github.com/jrd3n/ble_hacks/issues"
